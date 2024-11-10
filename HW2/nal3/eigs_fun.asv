@@ -1,0 +1,13 @@
+function l = eigs_fun(A,ind)
+
+if ind == 1
+    l = eigs(A,5,text);
+elseif ind == -1
+    l = eigs(A,5,text);
+else
+    error('ind naj bo 1 (max abs) ali -1 (min abs)');
+% f = @(x)alfa*(Q*x+1/n*e*(d'*x))+(1-alfa)*1/n*e*(e'*x);
+e
+
+
+end

@@ -1,0 +1,17 @@
+function maxlamb = inv_potencna_metoda(A)    
+    n = size(A,1);
+    z = ones(n,1);
+    % 1. korak
+    x = A\z;
+    alfa = z'*x;
+    tol = inf;
+    % 2, 3
+    while tol >= 10^-16
+       z = x/norm(x,2);
+       x = A\z;
+       alfa = z'*x;
+       tol = abs(alfa-r)/abs(r);
+       r = alfa;
+    end
+    maxlamb = 1/alfa;
+end
